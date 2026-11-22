@@ -1,0 +1,49 @@
+{
+  "name": "dsh-session-cleanup",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Delete DSH sessions for real: detach the registry through the official API, move the log to a 7-day recycle bin, and sweep orphan log directories and projection caches.",
+  "author": "sunml",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.5 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.5": "verified"
+      },
+      "note": "Host half uses ctx.workspaceRegistry (detachSession / unarchiveSession / list), ctx.sessionPersistence (list / stat), ctx.sessions, ctx.waterfall('workspace/session-activity') and ctx.webServer.register. It never writes workspace.json by hand and never needs the app to be quit. Deletability is decided by that activity waterfall, not by ctx.sessions residency, because DSH never evicts an opened session. Client half uses slots.inject/register and the locale service, which becomes available after apply and must be awaited through ctx.inject."
+    }
+  },
+  "icon": "./icon.svg"
+}

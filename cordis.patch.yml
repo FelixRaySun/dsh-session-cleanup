@@ -1,0 +1,10 @@
+# dsh-session-cleanup bundle patch.
+#
+# 单包双面：宿主半区（index.js）负责盘点与删除事务，浏览器半区（client.js）
+# 在左侧图标栏挂入口、在主区渲染清理页。宿主半区只通过官方 API 改注册表，
+# 文件层用 rename 搬到 <DSH_HOME>/trash/dsh-session-cleanup/ 保留 7 天。
+- insert:
+    - id: dsh-session-cleanup
+      name: dsh-session-cleanup
+      config:
+        retentionDays: 7

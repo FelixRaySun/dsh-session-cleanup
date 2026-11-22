@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Session cleanup",
+    "description": "Delete sessions for real. The registry is detached through the official API and the log moves to a recycle bin, so no restart is needed and nothing is erased until the retention window passes. Also sweeps orphan log directories and orphan projection caches.",
+    "detail": "docs/DETAIL.md"
+  }
+}
