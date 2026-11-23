@@ -215,7 +215,7 @@ Host 侧在 `/api/dsh-session-cleanup` 下注册五个方法，全部同源校�
 [Apache License 2.0](LICENSE)
 
 ```
-Copyright 2026 sunml
+Copyright 2026  FelixSun
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
