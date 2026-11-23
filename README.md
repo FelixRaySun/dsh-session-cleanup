@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![DSH](https://img.shields.io/badge/DSH-%3E%3D0.2.2--rc.5-green.svg)](package.json)
 
-作者：[sunml](https://github.com/sunml)
+作者：[FelixSun](https://github.com/FelixRaySun)
 
 DSH 只有归档：归档只是往一个 id 数组里加一项，日志文件一个字节都不动。想真正释放磁盘、抹掉历史，官方目前没给功能。这个插件补上这一层，而且**不需要退出应用、不需要手改 `workspace.json`**。
 
@@ -234,6 +234,6 @@ limitations under the License.
 
 ## 作者
 
-**sunml**
+**FelixSun**
 
 如果这个插件帮你省了事，欢迎提 Issue 或 PR。
