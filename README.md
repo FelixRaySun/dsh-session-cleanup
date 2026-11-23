@@ -11,6 +11,8 @@ DSH 只有归档：归档只是往一个 id 数组里加一项，日志文件一
 
 ![会话清理页面](docs/images/overview.jpg)
 
+<sub>会话列表：每个会话的日志大小、投影缓存大小、所属工作区与状态；顶部是五项总量指标。</sub>
+
 ---
 
 ## 为什么不用手改 `workspace.json`
@@ -77,6 +79,10 @@ DSH 只有归档：归档只是往一个 id 数组里加一项，日志文件一
 
 - **还原** — 日志 `rename` 回原位，再 `attachSession` 挂回工作区。工作区目录已不存在时落到「未分组」，不算失败
 - **永久删除** — 只在保留期过后才可用，必须显式点名那一批
+
+![孤儿清理与回收站](docs/images/trash-and-orphans.jpg)
+
+<sub>页面下半部分：孤儿日志目录、孤儿投影缓存，以及带剩余天数的回收站批次——每批可以单独还原或永久删除。</sub>
 
 ---
 
@@ -215,7 +221,7 @@ Host 侧在 `/api/dsh-session-cleanup` 下注册五个方法，全部同源校�
 [Apache License 2.0](LICENSE)
 
 ```
-Copyright 2026  FelixSun
+Copyright 2026 FelixSun
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

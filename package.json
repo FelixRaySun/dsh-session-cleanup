@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Delete DSH sessions for real: detach the registry through the official API, move the log to a 7-day recycle bin, and sweep orphan log directories and projection caches.",
-  "author": "sunml",
+  "author": "FelixSun",
   "license": "Apache-2.0",
   "type": "module",
   "main": "index.js",
